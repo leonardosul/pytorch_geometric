@@ -9,7 +9,13 @@ jobs:
 
   full_gpu_pytest:
     if: github.repository == 'pyg-team/pytorch_geometric'
-    runs-on: [self-hosted, nvidia]
+    runs-on:
+      - machine
+      - gpu=t4
+      - tenancy=spot
+      - cpu=4
+      - ram=16
+      - architecture=x64
 
     steps:
       - name: Checkout repository
