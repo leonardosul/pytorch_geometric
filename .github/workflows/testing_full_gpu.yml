@@ -8,7 +8,7 @@ on:  # yamllint disable-line rule:truthy
 jobs:
 
   full_gpu_pytest:
-    if: github.repository == 'pyg-team/pytorch_geometric'
+#    if: github.repository == 'pyg-team/pytorch_geometric'
     runs-on:
       - machine
       - gpu=t4
