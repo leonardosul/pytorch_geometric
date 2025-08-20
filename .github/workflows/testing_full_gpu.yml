@@ -24,7 +24,9 @@ jobs:
       - name: Setup packages
         uses: ./.github/actions/setup
         with:
-          cuda-version: 'cu121'
+          cuda-version: 'cu118'
+          torch-version: '2.3.0'
+          torchvision-version: '0.18.0'
 
       - name: Print GPU information
         run: |
